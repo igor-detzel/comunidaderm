@@ -20,6 +20,9 @@
 # production
 /build
 
+# local zip exports
+*.zip
+
 # misc
 .DS_Store
 *.pem
