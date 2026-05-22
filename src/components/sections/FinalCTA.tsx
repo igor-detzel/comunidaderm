@@ -59,11 +59,6 @@ export function FinalCTA() {
             Escritórios grandes não foram construídos por acidente.
           </h2>
 
-          {/* Closing paragraph */}
-          <p className="mt-9 text-[19px] leading-[1.55] text-stone md:text-[22px]">
-            Depois do RM Summit, os bônus encerram e os valores mudam.
-          </p>
-
           {/* CTA */}
           <div className="mt-10 flex flex-col items-stretch gap-5 sm:flex-row sm:items-center">
             <Link

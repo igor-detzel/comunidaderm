@@ -135,19 +135,6 @@ export function Hero() {
       <div className="relative z-10">
         <div className="mx-auto max-w-7xl px-6 pb-20 pt-24 sm:pt-28 md:px-10 md:pt-32 lg:pt-36">
           <div className="mx-auto max-w-4xl text-center">
-            {/* Badge pill */}
-            <div
-              className="fade-up mb-7 inline-flex items-center gap-3 rounded-full border border-bone/10 bg-base/40 px-2.5 py-2 backdrop-blur-md"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <span className="inline-flex items-center rounded-full bg-bone px-2 py-0.5 text-[10.5px] font-semibold uppercase tracking-wide text-base">
-                Novo
-              </span>
-              <span className="text-[12.5px] font-medium tracking-tight text-bone-2 md:text-[13px]">
-                Inscrições abertas · RM Summit 2026
-              </span>
-            </div>
-
             {/* Big serif title */}
             <h1
               className="fade-up font-display text-[44px] font-normal leading-[1.02] tracking-[-0.025em] text-bone text-balance sm:text-[64px] md:text-[80px] md:leading-[0.98] md:tracking-[-0.03em] lg:text-[100px] xl:text-[112px]"
@@ -182,13 +169,6 @@ export function Hero() {
               >
                 Quero fazer parte
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-              </Link>
-              <Link
-                href="#diferenca"
-                className="group inline-flex items-center justify-center gap-2 rounded-full border border-bone/15 bg-bone/5 px-6 py-3.5 text-[14px] font-medium text-bone-2 backdrop-blur transition-all hover:border-bone/30 hover:bg-bone/10 hover:text-bone"
-              >
-                Meu escritório cresceu. E agora?
-                <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -249,44 +229,6 @@ export function Hero() {
               </span>
             </blockquote>
 
-            {/* Ornamental divider — hairlines + center diamond */}
-            <div className="flex w-2/3 max-w-xs items-center gap-3.5">
-              <span className="h-px flex-1 bg-gradient-to-r from-transparent to-bone/20" />
-              <svg
-                viewBox="0 0 12 12"
-                className="gold-shine h-2.5 w-2.5 rotate-45 flex-shrink-0"
-                aria-hidden
-              >
-                <rect x="1" y="1" width="10" height="10" fill="currentColor" />
-              </svg>
-              <span className="h-px flex-1 bg-gradient-to-l from-transparent to-bone/20" />
-            </div>
-
-            {/* Award — heraldic plaque style with diamond ornaments */}
-            <div className="flex flex-col items-center gap-3 text-center">
-              <div className="flex items-center gap-4">
-                <svg
-                  viewBox="0 0 12 12"
-                  className="h-2 w-2 rotate-45 flex-shrink-0 text-accent"
-                  aria-hidden
-                >
-                  <rect x="1" y="1" width="10" height="10" fill="currentColor" />
-                </svg>
-                <span className="font-display text-[19px] italic font-medium leading-none text-bone md:text-[22px]">
-                  Prêmio Nacional
-                </span>
-                <svg
-                  viewBox="0 0 12 12"
-                  className="h-2 w-2 rotate-45 flex-shrink-0 text-accent"
-                  aria-hidden
-                >
-                  <rect x="1" y="1" width="10" height="10" fill="currentColor" />
-                </svg>
-              </div>
-              <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-bone-2/75">
-                Melhor CEO de Escritório de Advocacia
-              </span>
-            </div>
           </div>
 
           {/* Stats — partners-style trust grid */}

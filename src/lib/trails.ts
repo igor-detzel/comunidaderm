@@ -4,10 +4,18 @@ export type Trail = {
   name: string;
   subtitle?: string;
   intro?: string;
+  price?: {
+    amount: string;
+    installments?: string;
+  };
   groups: { title?: string; items: string[] }[];
   bonus: string | string[];
   bonusLabel?: string;
   href: string;
+  secondaryAction?: {
+    label: string;
+    href: string;
+  };
   featured?: boolean;
 };
 
@@ -16,7 +24,11 @@ export const trails: Trail[] = [
     slug: "mat",
     tag: "Para advogados trabalhistas",
     name: "MAT",
-    subtitle: "Mentoria em Advocacia Trabalhista",
+    subtitle: "Mentoria Trabalhista",
+    price: {
+      amount: "R$ 5.000",
+      installments: "ou 12x de R$ 517,12",
+    },
     groups: [
       {
         items: [
@@ -29,15 +41,19 @@ export const trails: Trail[] = [
         ],
       },
     ],
-    bonus: "Call individual de raio-x do escritório",
+    bonus: "Call individual para raio-X do seu escritório",
     bonusLabel: "Bônus do evento",
-    href: "#",
+    href: "https://pay.hub.la/3FaoWaw5NMmzBjneje0G",
   },
   {
     slug: "map",
     tag: "Para advogados previdenciários",
     name: "MAP",
-    subtitle: "Mentoria em Advocacia Previdenciária",
+    subtitle: "Mentoria Previdenciária",
+    price: {
+      amount: "R$ 5.000",
+      installments: "ou 12x de R$ 517,12",
+    },
     groups: [
       {
         items: [
@@ -50,15 +66,19 @@ export const trails: Trail[] = [
         ],
       },
     ],
-    bonus: "Call individual de raio-x do escritório",
+    bonus: "Call individual para raio-X do seu escritório",
     bonusLabel: "Bônus do evento",
-    href: "#",
+    href: "https://pay.hub.la/rkTc7UROEMo4Jkf4QWrf",
   },
   {
     slug: "comunidade",
     tag: "Para escritórios que já têm resultados e querem continuar evoluindo",
     name: "Comunidade",
     subtitle: "O nível de proximidade mais alto com Rafael Mendes",
+    price: {
+      amount: "R$ 20.000",
+      installments: "ou 12x de R$ 2.068,47",
+    },
     groups: [
       {
         title: "Conteúdo",
@@ -86,10 +106,14 @@ export const trails: Trail[] = [
     bonus: [
       "Ingresso Master para um acompanhante",
       "Acompanhamento individual",
-      "Visita presencial às sedes do escritório",
+      "Visita presencial às unidades do escritório",
     ],
     bonusLabel: "Bônus do evento",
-    href: "#",
+    href: "https://pay.hub.la/UtTzwjqiYedVjWW5DAvd",
+    secondaryAction: {
+      label: "Quero entrar com um sócio",
+      href: "https://pay.hub.la/lOiJKahQZJIJRumVfLE0",
+    },
     featured: true,
   },
   {
@@ -98,6 +122,10 @@ export const trails: Trail[] = [
     name: "Formação de Lideranças",
     intro:
       "Para donos de escritório que cresceram, mas ainda carregam tudo nas próprias costas. Os treinamentos são conduzidos pelos próprios líderes do meu escritório — não por um consultor externo. Quem vive a operação ensina a operação.",
+    price: {
+      amount: "R$ 24.000",
+      installments: "ou 12x de R$ 2.482,16",
+    },
     groups: [
       {
         title: "Conhecimento e acompanhamento",
@@ -135,8 +163,8 @@ export const trails: Trail[] = [
         ],
       },
     ],
-    bonus: "Treinamento presencial de até 5 dias para até 3 pessoas do seu escritório",
+    bonus: "Treinamento presencial no nosso escritório, de até 5 dias, para até 3 pessoas do seu escritório (meus líderes irão treinar sua equipe)",
     bonusLabel: "Bônus do evento",
-    href: "#",
+    href: "https://pay.hub.la/yCMh8BkvtVEm5VxEhGN6",
   },
 ];

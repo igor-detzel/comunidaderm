@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Geist } from "next/font/google";
+import { Fraunces, Geist, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const display = Fraunces({
@@ -13,6 +13,13 @@ const display = Fraunces({
 const sans = Geist({
   variable: "--font-sans",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
@@ -30,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${display.variable} ${sans.variable} h-full antialiased`}
+      className={`${display.variable} ${sans.variable} ${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-base text-bone font-sans">
         {children}

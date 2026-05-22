@@ -16,30 +16,30 @@ function Diamond({ className = "h-2 w-2" }: { className?: string }) {
 function CompactTrailCard({ trail }: { trail: Trail }) {
   return (
     <article className="group relative flex flex-col rounded-2xl border border-line bg-base-2/30 p-8 backdrop-blur-sm transition-all duration-500 hover:-translate-y-0.5 hover:border-bone/20 hover:bg-base-2/50 md:p-10">
-      {/* Tag */}
-      <div className="flex items-start gap-3">
-        <svg
-          viewBox="0 0 12 12"
-          aria-hidden
-          className="mt-[6px] h-1.5 w-1.5 rotate-45 flex-shrink-0 text-accent"
-        >
-          <rect x="1" y="1" width="10" height="10" fill="currentColor" />
-        </svg>
-        <span className="text-[10px] font-medium uppercase leading-[1.5] tracking-[0.3em] text-bone-2/75">
-          {trail.tag}
-        </span>
-      </div>
-
       {/* Name */}
-      <h3 className="mt-7 font-display text-[60px] font-normal italic leading-[0.95] tracking-[-0.01em] text-bone md:text-[76px]">
+      <h3 className="font-montserrat text-[44px] font-bold uppercase leading-[0.95] tracking-[-0.02em] text-bone md:text-[56px]">
         {trail.name}
       </h3>
 
       {/* Subtitle */}
       {trail.subtitle && (
-        <p className="mt-4 font-display text-[18px] italic leading-[1.4] text-bone-2 md:text-[20px]">
+        <p className="mt-4 font-montserrat text-[14px] font-semibold uppercase leading-[1.4] tracking-[0.04em] text-bone-2/85 md:text-[16px]">
           {trail.subtitle}
         </p>
+      )}
+
+      {/* Price */}
+      {trail.price && (
+        <div className="mt-6 flex flex-col gap-1">
+          <span className="font-montserrat text-[32px] font-bold leading-none tracking-tight text-bone md:text-[38px]">
+            {trail.price.amount}
+          </span>
+          {trail.price.installments && (
+            <span className="text-[13px] leading-tight text-stone md:text-[14px]">
+              {trail.price.installments}
+            </span>
+          )}
+        </div>
       )}
 
       {/* Divider */}
@@ -51,11 +51,11 @@ function CompactTrailCard({ trail }: { trail: Trail }) {
       </div>
 
       {/* Deliverables */}
-      <ul className="mt-6 flex-1 space-y-2.5">
+      <ul className="mt-6 flex-1 space-y-3">
         {trail.groups[0].items.map((item) => (
           <li
             key={item}
-            className="flex gap-3 text-[14.5px] leading-[1.55] text-bone-2 md:text-[15px]"
+            className="flex gap-3 text-[16px] leading-[1.55] text-bone-2 md:text-[17px]"
           >
             <span
               aria-hidden
@@ -124,32 +124,12 @@ function TrailCard({ trail }: { trail: Trail }) {
         <div className="grid grid-cols-1 gap-x-14 gap-y-12 md:grid-cols-12 md:gap-y-0">
           {/* LEFT — Identity + CTA */}
           <div className="md:col-span-5">
-            {/* Tag row */}
-            <div className="flex items-start gap-3">
-              <svg
-                viewBox="0 0 12 12"
-                aria-hidden
-                className={`mt-[6px] h-1.5 w-1.5 rotate-45 flex-shrink-0 ${
-                  isFeatured ? "text-base" : "text-accent"
-                }`}
-              >
-                <rect x="1" y="1" width="10" height="10" fill="currentColor" />
-              </svg>
-              <span
-                className={`text-[10px] font-medium uppercase leading-[1.5] tracking-[0.3em] ${
-                  isFeatured ? "text-base/80" : "text-bone-2/75"
-                }`}
-              >
-                {trail.tag}
-              </span>
-            </div>
-
             {/* Name */}
             <h3
-              className={`mt-8 font-display font-normal italic leading-[0.95] tracking-[-0.01em] md:mt-10 ${
+              className={`font-montserrat font-bold uppercase leading-[0.95] ${
                 isFeatured
-                  ? "text-base text-[56px] md:text-[80px] lg:text-[96px]"
-                  : "text-bone text-[48px] md:text-[68px] lg:text-[80px]"
+                  ? "text-base text-[40px] tracking-[-0.05em] md:text-[58px] lg:text-[68px]"
+                  : "text-bone text-[36px] tracking-[-0.02em] md:text-[48px] lg:text-[56px]"
               }`}
             >
               {trail.name}
@@ -158,7 +138,7 @@ function TrailCard({ trail }: { trail: Trail }) {
             {/* Subtitle */}
             {trail.subtitle && (
               <p
-                className={`mt-4 font-display text-[18px] italic leading-[1.4] md:mt-5 md:text-[20px] ${
+                className={`mt-4 font-montserrat text-[16px] font-medium leading-[1.4] md:mt-5 md:text-[18px] ${
                   isFeatured ? "text-base/85" : "text-bone-2"
                 }`}
               >
@@ -172,6 +152,28 @@ function TrailCard({ trail }: { trail: Trail }) {
                 {trail.intro}
               </p>
             )}
+
+            {/* Price */}
+            {trail.price && (
+              <div className="mt-7 flex flex-col gap-1 md:mt-8">
+                <span
+                  className={`font-montserrat text-[36px] font-bold leading-none tracking-tight md:text-[44px] ${
+                    isFeatured ? "text-base" : "text-bone"
+                  }`}
+                >
+                  {trail.price.amount}
+                </span>
+                {trail.price.installments && (
+                  <span
+                    className={`text-[13px] leading-tight md:text-[15px] ${
+                      isFeatured ? "text-base/75" : "text-stone"
+                    }`}
+                  >
+                    {trail.price.installments}
+                  </span>
+                )}
+              </div>
+            )}
           </div>
 
           {/* RIGHT — Value */}
@@ -181,20 +183,20 @@ function TrailCard({ trail }: { trail: Trail }) {
             }`}
           >
             {/* Eyebrow */}
-            <div className="flex items-center gap-3">
-              <span
-                className={`text-[10px] font-medium uppercase tracking-[0.3em] ${
-                  isFeatured ? "text-base/80" : "text-bone-2/75"
-                }`}
-              >
-                O que está incluso
-              </span>
-              <span
-                className={`h-px flex-1 ${
-                  isFeatured ? "bg-base/15" : "bg-line"
-                }`}
-              />
-            </div>
+            {isFeatured ? (
+              <div className="border-b border-base/20 pb-3">
+                <span className="text-[13px] font-black uppercase tracking-[0.28em] text-base md:font-bold">
+                  O que está incluso
+                </span>
+              </div>
+            ) : (
+              <div className="flex items-center gap-3">
+                <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-bone-2/75">
+                  O que está incluso
+                </span>
+                <span className="h-px flex-1 bg-line" />
+              </div>
+            )}
 
             {/* Deliverables */}
             <div
@@ -206,18 +208,20 @@ function TrailCard({ trail }: { trail: Trail }) {
                 <div key={g.title ?? `g-${gi}`}>
                   {g.title && (
                     <p
-                      className={`mb-3 text-[10px] font-medium uppercase tracking-[0.28em] ${
-                        isFeatured ? "text-base/85" : "text-accent"
+                      className={`mb-3 uppercase tracking-[0.26em] ${
+                        isFeatured
+                          ? "text-[13px] font-black text-base md:font-bold"
+                          : "text-[10px] font-medium text-accent"
                       }`}
                     >
                       {g.title}
                     </p>
                   )}
-                  <ul className="space-y-2.5">
+                  <ul className="space-y-3">
                     {g.items.map((item) => (
                       <li
                         key={item}
-                        className={`flex gap-3 text-[14.5px] leading-[1.55] md:text-[15px] ${
+                        className={`flex gap-3 text-[16px] leading-[1.55] md:text-[17px] ${
                           isFeatured ? "text-base/90" : "text-bone-2"
                         }`}
                       >
@@ -252,8 +256,10 @@ function TrailCard({ trail }: { trail: Trail }) {
                   <rect x="1" y="1" width="10" height="10" fill="currentColor" />
                 </svg>
                 <span
-                  className={`text-[10px] font-medium uppercase tracking-[0.3em] ${
-                    isFeatured ? "text-base/85" : "text-accent"
+                  className={`uppercase tracking-[0.28em] ${
+                    isFeatured
+                      ? "text-[13px] font-bold text-base"
+                      : "text-[10px] font-medium text-accent"
                   }`}
                 >
                   {trail.bonusLabel ?? "Bônus do evento"}
@@ -303,6 +309,23 @@ function TrailCard({ trail }: { trail: Trail }) {
                 →
               </span>
             </Link>
+
+            {/* Secondary action — optional partner/sócio link */}
+            {trail.secondaryAction && (
+              <Link
+                href={trail.secondaryAction.href}
+                className={`group/cta2 mt-3 flex h-12 w-full items-center justify-center gap-3 rounded-full border px-6 text-[14.5px] font-medium transition-all ${
+                  isFeatured
+                    ? "border-base/40 bg-transparent text-base hover:border-base hover:bg-base/10"
+                    : "border-line-strong bg-transparent text-bone hover:border-bone-2 hover:bg-bone/5"
+                }`}
+              >
+                {trail.secondaryAction.label}
+                <span className="transition-transform duration-300 group-hover/cta2:translate-x-0.5">
+                  →
+                </span>
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -319,10 +342,10 @@ export function Trails() {
           <span className="h-px flex-1 bg-gradient-to-r from-transparent via-bone/10 to-bone/20" />
           <Diamond className="h-1.5 w-1.5" />
           <div className="flex items-baseline gap-1.5">
-            <span className="font-display text-[16px] leading-none text-bone-2/85 md:text-[18px]">
+            <span className="font-display text-[22px] leading-none text-bone-2/85 md:text-[28px]">
               Comunidade
             </span>
-            <span className="font-display text-[18px] italic font-medium leading-none text-accent md:text-[22px]">
+            <span className="font-display text-[26px] italic font-medium leading-none text-accent md:text-[34px]">
               RM
             </span>
           </div>

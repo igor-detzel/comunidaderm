@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 const faqs = [
   {
     q: "Meu escritório já funciona. Por que mudar agora?",
-    a: "Funcionar é diferente de escalar. A maioria dos escritórios que “funcionam” ainda depende do sócio para fechar, revisar, decidir e resolver. O crescimento acontece, mas não com leveza. O que ensino não é como começar — é como fazer o que você já tem funcionar sem você no centro de tudo.",
+    a: "Funcionar é diferente de escalar. A maioria dos escritórios que “funcionam” ainda depende do sócio para fechar, revisar, decidir e resolver. O crescimento acontece, mas não com leveza. Além de te ensinar a começar, te mostro como fazer o que já tem funcionar sem você no centro de tudo.",
   },
   {
     q: "Já tentei delegar e não funcionou.",
@@ -23,14 +25,26 @@ const faqs = [
 
 const trustMarks = [
   {
+    image: "/images/trust/award-trophy.jpg",
+    imageAlt: "Rafael Mendes recebendo prêmio nacional",
+    aspect: "aspect-[2/3]",
+    fit: "object-cover",
     title: "Melhor CEO de Escritório de Advocacia",
     body: "Prêmio nacional — reconhecimento pela operação, não pelo discurso.",
   },
   {
+    image: "/images/trust/google-reviews.png",
+    imageAlt: "Avaliação 5.0 no Google com 5.095 avaliações",
+    aspect: "aspect-[4/5]",
+    fit: "object-cover",
     title: "Escritório mais bem avaliado do Brasil",
     body: "Avaliação de clientes reais — não de alunos de mentoria.",
   },
   {
+    image: "/images/trust/growth-chart.png",
+    imageAlt: "Gráfico de crescimento 2022-2026",
+    aspect: "aspect-[16/9]",
+    fit: "object-contain",
     title: "Um dos maiores trabalhistas do Brasil",
     body: "Construído ao longo de 17 anos de operação ininterrupta.",
   },
@@ -63,9 +77,9 @@ export function FAQ() {
           <div className="space-y-5 text-stone md:col-span-5 md:pt-4">
             <p className="text-[16px] leading-[1.65] md:text-[17px]">
               Advogados que já chegaram longe costumam ter o mesmo problema: o
-              escritório cresceu, mas o dono cresce junto como gargalo. Mais
-              volume, mais responsabilidade, mais dependência de uma única
-              pessoa.
+              escritório cresce, mas o dono não consegue acompanhar o
+              crescimento. Mais volume, mais responsabilidade, mais
+              dependência de uma única pessoa.
             </p>
             <p className="text-[16px] leading-[1.65] md:text-[17px]">
               O que ensino nas mentorias não é como começar. É como transformar
@@ -128,6 +142,17 @@ export function FAQ() {
                     i > 0 ? "border-t border-line md:border-l md:border-t-0" : ""
                   }`}
                 >
+                  {/* Visual proof image */}
+                  <div className={`relative mb-7 ${m.aspect} w-full overflow-hidden rounded-xl border border-line bg-base-2/40`}>
+                    <Image
+                      src={m.image}
+                      alt={m.imageAlt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className={m.fit}
+                    />
+                  </div>
+
                   <h3 className="font-display text-[22px] font-normal italic leading-[1.25] tracking-[-0.005em] text-bone md:text-[26px] lg:text-[30px]">
                     {m.title}
                   </h3>
