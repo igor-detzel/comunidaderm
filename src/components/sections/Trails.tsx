@@ -82,7 +82,7 @@ function CompactTrailCard({ trail }: { trail: Trail }) {
       {/* CTA */}
       <Link
         href={trail.href}
-        className="group/cta mt-7 flex h-12 w-full items-center justify-center gap-3 rounded-full border border-line-strong bg-transparent px-6 text-[14px] font-medium text-bone transition-all hover:border-bone-2 hover:bg-bone hover:text-base"
+        className="group/cta mt-7 flex h-12 w-full items-center justify-center gap-3 rounded-full border-[3px] border-line-strong bg-transparent px-6 text-[14px] font-medium text-bone transition-all hover:border-bone-2 hover:bg-bone hover:text-base"
       >
         Quero fazer parte
         <span className="transition-transform duration-300 group-hover/cta:translate-x-0.5">
@@ -298,10 +298,10 @@ function TrailCard({ trail }: { trail: Trail }) {
             {/* CTA — after bonus, full width */}
             <Link
               href={trail.href}
-              className={`group/cta mt-8 flex h-12 w-full items-center justify-center gap-3 rounded-full px-6 text-[14.5px] font-medium transition-all ${
+              className={`group/cta mt-8 flex w-full items-center justify-center gap-3 rounded-full px-6 font-medium transition-all duration-300 ${
                 isFeatured
-                  ? "bg-base text-bone hover:bg-base-2"
-                  : "border border-line-strong bg-transparent text-bone hover:border-bone-2 hover:bg-bone hover:text-base"
+                  ? "h-14 bg-base text-[15px] font-semibold tracking-[0.01em] text-bone shadow-[0_14px_36px_-10px_rgba(10,10,10,0.55)] hover:-translate-y-0.5 hover:bg-base-2 hover:shadow-[0_22px_50px_-12px_rgba(10,10,10,0.65)]"
+                  : "h-12 border-[3px] border-line-strong bg-transparent text-[14.5px] text-bone hover:border-bone-2 hover:bg-bone hover:text-base"
               }`}
             >
               Quero fazer parte
@@ -342,10 +342,10 @@ export function Trails() {
           <span className="h-px flex-1 bg-gradient-to-r from-transparent via-bone/10 to-bone/20" />
           <Diamond className="h-1.5 w-1.5" />
           <div className="flex items-baseline gap-1.5">
-            <span className="font-display text-[22px] leading-none text-bone-2/85 md:text-[28px]">
+            <span className="font-display text-[26px] leading-none text-bone-2/85 md:text-[34px]">
               Comunidade
             </span>
-            <span className="font-display text-[26px] italic font-medium leading-none text-accent md:text-[34px]">
+            <span className="font-display text-[30px] italic font-medium leading-none text-accent md:text-[40px]">
               RM
             </span>
           </div>
@@ -390,7 +390,7 @@ export function Trails() {
           <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
             <div className="flex w-full items-center gap-4">
               <span className="h-px flex-1 bg-gradient-to-r from-transparent via-bone/10 to-bone/20" />
-              <span className="text-[10px] font-medium uppercase tracking-[0.32em] text-bone-2/70">
+              <span className="text-[12px] font-medium uppercase tracking-[0.34em] text-bone-2/80 md:text-[14px]">
                 Sobre delegar de verdade
               </span>
               <span className="h-px flex-1 bg-gradient-to-l from-transparent via-bone/10 to-bone/20" />

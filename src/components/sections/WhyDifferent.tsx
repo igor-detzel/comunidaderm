@@ -136,7 +136,7 @@ export function WhyDifferent() {
                       }`}
                     >
                       <Diamond className="h-2 w-2 opacity-60 transition-all duration-700 group-hover:opacity-100" />
-                      <span className="text-[10px] font-medium uppercase tracking-[0.34em] text-accent/90">
+                      <span className="text-[12px] font-medium uppercase tracking-[0.34em] text-accent/90 md:text-[14px]">
                         {c.kicker}
                       </span>
                     </div>
@@ -180,7 +180,7 @@ export function WhyDifferent() {
                 <span className="relative h-px w-10 bg-gradient-to-r from-transparent to-accent/60">
                   <span className="absolute -right-px top-1/2 h-1 w-1 -translate-y-1/2 rounded-full bg-accent" />
                 </span>
-                <span className="text-[10.5px] font-medium uppercase tracking-[0.32em] text-bone-2/80">
+                <span className="text-[12px] font-medium uppercase tracking-[0.34em] text-bone-2/80 md:text-[14px]">
                   A prova mais recente
                 </span>
               </div>

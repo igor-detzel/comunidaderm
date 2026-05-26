@@ -40,14 +40,6 @@ const trustMarks = [
     title: "Escritório mais bem avaliado do Brasil",
     body: "Avaliação de clientes reais — não de alunos de mentoria.",
   },
-  {
-    image: "/images/trust/growth-chart.png",
-    imageAlt: "Gráfico de crescimento 2022-2026",
-    aspect: "aspect-[16/9]",
-    fit: "object-contain",
-    title: "Um dos maiores trabalhistas do Brasil",
-    body: "Construído ao longo de 17 anos de operação ininterrupta.",
-  },
 ];
 
 function Diamond({ className = "h-1.5 w-1.5" }: { className?: string }) {
@@ -133,8 +125,8 @@ export function FAQ() {
         {/* Trust marks — 3 columns side-by-side */}
         <div className="mt-6 py-4 md:mt-32 md:py-16">
           <div className="mx-auto max-w-[84rem]">
-            {/* 3 trust marks side-by-side */}
-            <div className="grid grid-cols-1 md:grid-cols-3">
+            {/* 2 trust marks side-by-side */}
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-4">
               {trustMarks.map((m, i) => (
                 <div
                   key={m.title}

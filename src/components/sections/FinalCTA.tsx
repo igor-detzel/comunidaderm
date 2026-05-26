@@ -34,22 +34,8 @@ export function FinalCTA() {
 
         {/* Right — editorial copy */}
         <div className="flex flex-col justify-center px-6 py-16 md:px-12 md:py-20 lg:px-20 lg:py-24">
-          {/* Eyebrow */}
-          <div className="flex items-center gap-3">
-            <svg
-              viewBox="0 0 12 12"
-              aria-hidden
-              className="h-1.5 w-1.5 rotate-45 flex-shrink-0 text-accent"
-            >
-              <rect x="1" y="1" width="10" height="10" fill="currentColor" />
-            </svg>
-            <span className="text-[11.5px] font-medium uppercase tracking-[0.32em] text-accent">
-              Última chamada · RM Summit 2026
-            </span>
-          </div>
-
           {/* Intro paragraph */}
-          <p className="mt-10 text-[19px] leading-[1.55] text-stone md:text-[22px]">
+          <p className="text-[19px] leading-[1.55] text-stone md:text-[22px]">
             As condições apresentadas aqui são exclusivas para quem decide
             durante o evento.
           </p>
@@ -70,9 +56,6 @@ export function FinalCTA() {
                 →
               </span>
             </Link>
-            <p className="text-sm text-stone-2">
-              Bônus encerram ao fim do evento · Vagas limitadas por trilha
-            </p>
           </div>
         </div>
       </div>

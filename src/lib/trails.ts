@@ -84,6 +84,7 @@ export const trails: Trail[] = [
         title: "Conteúdo",
         items: [
           "2 anos de acesso ao conteúdo MAT",
+          "40 horas de conteúdo sobre direito material",
           "Aulas exclusivas da Comunidade",
           "Webinários e imersões virtuais",
           "Aulas bônus com convidados estratégicos",
@@ -104,6 +105,7 @@ export const trails: Trail[] = [
       },
     ],
     bonus: [
+      "+ de 50 aulas de direito material e processual gravadas exclusivamente para a Comunidade",
       "Ingresso Master para um acompanhante",
       "Acompanhamento individual",
       "Visita presencial às unidades do escritório",

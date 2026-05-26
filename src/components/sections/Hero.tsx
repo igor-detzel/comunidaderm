@@ -189,7 +189,7 @@ export function Hero() {
               <span className="relative h-px flex-1 bg-gradient-to-r from-transparent via-bone/15 to-bone/25">
                 <span className="absolute -right-px top-1/2 h-1 w-1 -translate-y-1/2 rounded-full bg-accent" />
               </span>
-              <span className="text-[10.5px] font-medium uppercase tracking-[0.32em] text-bone-2/70">
+              <span className="text-[12px] font-[540] uppercase tracking-[0.34em] text-bone-2/85 md:text-[14px]">
                 Reconhecimento
               </span>
               <span className="relative h-px flex-1 bg-gradient-to-l from-transparent via-bone/15 to-bone/25">
