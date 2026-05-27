@@ -82,7 +82,7 @@ function CompactTrailCard({ trail }: { trail: Trail }) {
       {/* CTA */}
       <Link
         href={trail.href}
-        className="group/cta mt-7 flex h-12 w-full items-center justify-center gap-3 rounded-full border-[3px] border-line-strong bg-transparent px-6 text-[14px] font-medium text-bone transition-all hover:border-bone-2 hover:bg-bone hover:text-base"
+        className="group/cta mt-7 flex h-12 w-full items-center justify-center gap-3 rounded-full bg-[#15935f] px-6 text-[14px] font-semibold text-bone transition-colors duration-300 hover:bg-[#18a86d]"
       >
         Quero fazer parte
         <span className="transition-transform duration-300 group-hover/cta:translate-x-0.5">
@@ -298,10 +298,10 @@ function TrailCard({ trail }: { trail: Trail }) {
             {/* CTA — after bonus, full width */}
             <Link
               href={trail.href}
-              className={`group/cta mt-8 flex w-full items-center justify-center gap-3 rounded-full px-6 font-medium transition-all duration-300 ${
+              className={`group/cta mt-8 flex w-full items-center justify-center gap-3 rounded-full px-6 font-semibold transition-colors duration-300 ${
                 isFeatured
-                  ? "h-14 bg-base text-[15px] font-semibold tracking-[0.01em] text-bone shadow-[0_14px_36px_-10px_rgba(10,10,10,0.55)] hover:-translate-y-0.5 hover:bg-base-2 hover:shadow-[0_22px_50px_-12px_rgba(10,10,10,0.65)]"
-                  : "h-12 border-[3px] border-line-strong bg-transparent text-[14.5px] text-bone hover:border-bone-2 hover:bg-bone hover:text-base"
+                  ? "h-14 bg-[#15935f] text-[15px] tracking-[0.01em] text-bone hover:bg-[#18a86d]"
+                  : "h-12 bg-[#15935f] text-[14.5px] text-bone hover:bg-[#18a86d]"
               }`}
             >
               Quero fazer parte
@@ -314,10 +314,10 @@ function TrailCard({ trail }: { trail: Trail }) {
             {trail.secondaryAction && (
               <Link
                 href={trail.secondaryAction.href}
-                className={`group/cta2 mt-3 flex h-12 w-full items-center justify-center gap-3 rounded-full border px-6 text-[14.5px] font-medium transition-all ${
+                className={`group/cta2 mt-3 flex h-12 w-full items-center justify-center gap-3 rounded-full px-6 text-[14.5px] font-semibold transition-colors duration-300 ${
                   isFeatured
-                    ? "border-base/40 bg-transparent text-base hover:border-base hover:bg-base/10"
-                    : "border-line-strong bg-transparent text-bone hover:border-bone-2 hover:bg-bone/5"
+                    ? "bg-bone text-base hover:bg-bone-2"
+                    : "border-2 border-line-strong bg-transparent text-bone hover:border-bone-2 hover:bg-bone/5"
                 }`}
               >
                 {trail.secondaryAction.label}
